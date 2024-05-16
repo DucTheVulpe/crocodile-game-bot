@@ -13,5 +13,5 @@ require (
 	github.com/prometheus/client_golang v1.3.0
 	github.com/sirupsen/logrus v1.4.2
 	github.com/x-cray/logrus-prefixed-formatter v0.5.2
-	gopkg.in/tucnak/telebot.v2 v2.0.0-20191225234705-baa616bc00d5
+	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
