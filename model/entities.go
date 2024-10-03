@@ -30,6 +30,7 @@ type UserInChat struct {
 
 	// When user was a guesser
 	Guessed int
+	Liked int
 }
 
 type Statistics struct {
