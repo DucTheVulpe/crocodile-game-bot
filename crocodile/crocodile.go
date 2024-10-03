@@ -26,8 +26,8 @@ import (
 
 	"github.com/looplab/fsm"
 
-	"github.com/nuetoban/crocodile-game-bot/model"
-	"github.com/nuetoban/crocodile-game-bot/utils"
+	"github.com/DucTheVulpe/crocodile-game-bot/model"
+	"github.com/DucTheVulpe/crocodile-game-bot/utils"
 )
 
 const (
