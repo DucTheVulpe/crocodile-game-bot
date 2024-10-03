@@ -24,7 +24,7 @@ import (
 
 	"fmt"
 
-	"github.com/nuetoban/crocodile-game-bot/model"
+	"github.com/DucTheVulpe/crocodile-game-bot/model"
 )
 
 type Postgres struct {
@@ -112,6 +112,7 @@ func (p *Postgres) IncrementUserStats(chat model.Chat, givenUser ...model.UserIn
 				"was_host": user.WasHost + u.WasHost,
 				"success":  user.Success + u.Success,
 				"guessed":  user.Guessed + u.Guessed,
+				"liked":    user.Liked + u.Liked,
 			}).Error
 		if err != nil {
 			tx.Rollback()
@@ -126,6 +127,12 @@ func (p *Postgres) IncrementUserStats(chat model.Chat, givenUser ...model.UserIn
 func (p *Postgres) GetRating(chatID int64) ([]model.UserInChat, error) {
 	var users []model.UserInChat
 	p.db.Where("guessed > 0 AND chat_id = ?", chatID).Limit(25).Order("guessed desc").Find(&users)
+	return users, nil
+}
+
+func (p *Postgres) GetLikedRating(chatID int64) ([]model.UserInChat, error) {
+	var users []model.UserInChat
+	p.db.Where("liked > 0 AND chat_id = ?", chatID).Limit(25).Order("liked desc").Find(&users)
 	return users, nil
 }
 
