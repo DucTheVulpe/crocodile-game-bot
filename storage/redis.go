@@ -23,7 +23,7 @@ import (
 	"strconv"
 
 	"github.com/gomodule/redigo/redis"
-	"github.com/nuetoban/crocodile-game-bot/crocodile"
+	"github.com/DucTheVulpe/crocodile-game-bot/crocodile"
 )
 
 type Redis struct {
