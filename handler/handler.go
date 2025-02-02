@@ -2,7 +2,7 @@ package handler
 
 import (
 	tele "gopkg.in/telebot.v3"
-	"gopkg.in/telebot.v3/layout"
+	"gopkg.in/tucnak/telebot.v3/layout"
 )
 
 func New(h Handler) handler {
