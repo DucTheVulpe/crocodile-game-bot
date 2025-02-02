@@ -35,7 +35,7 @@ import (
 	"github.com/gomodule/redigo/redis"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	tb "gopkg.in/tucnak/telebot.v2"
+	tb "gopkg.in/tucnak/telebot.v3"
 
 	"github.com/nuetoban/crocodile-game-bot/crocodile"
 	"github.com/nuetoban/crocodile-game-bot/model"
