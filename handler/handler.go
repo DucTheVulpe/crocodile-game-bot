@@ -19,7 +19,7 @@ type (
 	}
 
 	handler struct {
-		b   *tele.Bot
+		bot   *tele.Bot
 		lt  *layout.Layout
 	}
 )
